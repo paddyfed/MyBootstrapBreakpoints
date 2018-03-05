@@ -35,7 +35,7 @@ namespace MyBootstrapBreakpoints
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            var options = new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, 63423);
+            var options = new RewriteOptions().AddRedirectToHttps();
 
             app.UseRewriter(options);
 
